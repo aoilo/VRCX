@@ -1906,7 +1906,8 @@
             "date": "Date",
             "user": "User",
             "type": "Type",
-            "detail": "Detail"
+            "detail": "Detail",
+            "dateJoined": "Date Joined"
         },
         "friendLog": {
             "date": "Date",

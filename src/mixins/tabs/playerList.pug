@@ -467,6 +467,12 @@ mixin playerListTab
                                 span.flags(
                                     :class='languageClass(item.key)'
                                     style='display: inline-block; margin-right: 5px')
+                    el-table-column(:label='$t("table.playerList.dateJoined")' width='120' prop='ref.date_joined')
+                        template(#default='scope')
+                            el-tooltip(placement='right')
+                                template(#content)
+                                    span {{ scope.row.ref.date_joined | formatDate('long') }}
+                                span {{ scope.row.ref.date_joined | formatDate('short') }}
                     el-table-column(:label='$t("table.playerList.bioLink")' width='100' prop='ref.bioLinks')
                         template(#default='scope')
                             div(style='display: flex; align-items: center')
