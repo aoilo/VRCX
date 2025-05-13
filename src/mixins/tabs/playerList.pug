@@ -472,7 +472,7 @@ mixin playerListTab
                             el-tooltip(placement='right')
                                 template(#content)
                                     span {{ scope.row.ref.date_joined | formatDate('long') }}
-                                span {{ scope.row.ref.date_joined | formatDate('short') }}
+                                span {{ scope.row.ref.date_joined | formatDate('long') }}
                     el-table-column(:label='$t("table.playerList.bioLink")' width='100' prop='ref.bioLinks')
                         template(#default='scope')
                             div(style='display: flex; align-items: center')
