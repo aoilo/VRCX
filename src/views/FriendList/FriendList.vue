@@ -253,7 +253,11 @@
                     width="120"
                     prop="date_joined"
                     sortable
-                    :sort-method="(a, b) => sortAlphabetically(a, b, 'date_joined')"></el-table-column>
+                    :sort-method="(a, b) => sortAlphabetically(a, b, 'date_joined')">
+                    <template slot-scope="scope">
+                        <span>{{ scope.row.date_joined | formatDate('long') }}</span>
+                    </template>
+                </el-table-column>
                 <el-table-column :label="$t('table.friendList.unfriend')" width="100" align="center">
                     <template slot-scope="scope">
                         <el-button
